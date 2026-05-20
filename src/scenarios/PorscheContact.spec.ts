@@ -15,9 +15,18 @@ test.describe('Porsche Consulting', () => {
     await page.goto(BASE_URL);
   });
 
-  test('Preencher formulario de contato', async ({ page }) => {
-    await porscheContactPage.preencherFormularioContato();
-    await porscheContactPage.validarFormularioPreenchido();
-    await page.waitForTimeout(10000);
+  test('Cenario 1 - solicitar consultoria para industria automotiva', async () => {
+    await porscheContactPage.preencherCenarioConsultoriaAutomotiva();
+    await porscheContactPage.validarCenarioConsultoriaAutomotiva();
+  });
+
+  test('Cenario 2 - entrar em contato sobre carreira', async () => {
+    await porscheContactPage.preencherCenarioCarreira();
+    await porscheContactPage.validarCenarioCarreira();
+  });
+
+  test('Cenario 3 - solicitar informacoes para midia', async () => {
+    await porscheContactPage.preencherCenarioMidia();
+    await porscheContactPage.validarCenarioMidia();
   });
 });

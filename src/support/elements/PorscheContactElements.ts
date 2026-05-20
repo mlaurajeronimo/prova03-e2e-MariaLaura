@@ -19,6 +19,14 @@ export default class PorscheContactElements extends BaseElements {
     return this.page.locator('label[for="edit-branchen-automobilindustrie"]');
   }
 
+  getCheckboxBensConsumo(): Locator {
+    return this.page.locator('#edit-branchen-konsumgter');
+  }
+
+  getLabelBensConsumo(): Locator {
+    return this.page.locator('label[for="edit-branchen-konsumgter"]');
+  }
+
   getCheckboxEstrategia(): Locator {
     return this.page.locator('#edit-leistungen-strategie-und-organisation');
   }
@@ -27,6 +35,14 @@ export default class PorscheContactElements extends BaseElements {
     return this.page.locator(
       'label[for="edit-leistungen-strategie-und-organisation"]'
     );
+  }
+
+  getCheckboxMarcaVendas(): Locator {
+    return this.page.locator('#edit-leistungen-marke-und-vertrieb');
+  }
+
+  getLabelMarcaVendas(): Locator {
+    return this.page.locator('label[for="edit-leistungen-marke-und-vertrieb"]');
   }
 
   getCampoNome(): Locator {
